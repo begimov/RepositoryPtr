@@ -16,6 +16,8 @@ class TopicController extends Controller
     {
         $this->topics = $topics;
         $this->users = $users;
+
+        dd($users->all(), $topics->all());
     }
     public function index()
     {
