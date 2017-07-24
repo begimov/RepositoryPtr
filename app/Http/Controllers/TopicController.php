@@ -16,12 +16,10 @@ class TopicController extends Controller
     {
         $this->topics = $topics;
         $this->users = $users;
-
-        dd($users->all(), $topics->all());
     }
     public function index()
     {
-        $topics = $this->topics->all();
+        $topics = $this->topics->delete(11);
         $users = $this->users->all();
 
         dd($topics, $users);
